@@ -38,7 +38,7 @@ RUN echo "export LD_LIBRARY_PATH=${HOME}/lib:${LD_LIBRARY_PATH}" >> /etc/bash.ba
 RUN echo "PKG_CONFIG_PATH=${HOME}/lib/pkgconfig:${PKG_CONFIG_PATH}" >> /etc/bash.bashrc
 
 ### Install pre-release of ThorneyTreeLikelihood BEAST ###
-ENV BEAST_VERSION=0.1.1
+ENV BEAST_VERSION=0.1.2
 RUN wget https://github.com/beast-dev/beast-mcmc/releases/download/v1.10.5pre_thorney_v${BEAST_VERSION}/BEASTv1.10.5pre_thorney_${BEAST_VERSION}.tgz \
   && tar -xzf BEASTv1.10.5pre_thorney_${BEAST_VERSION}.tgz \
   && rm BEASTv1.10.5pre_thorney_${BEAST_VERSION}.tgz
